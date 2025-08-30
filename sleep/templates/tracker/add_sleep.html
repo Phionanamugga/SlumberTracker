@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>Log a Sleep Session</h2>
+    <form method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'dashboard' %}">Back</a>
+  </body>
+</html>
