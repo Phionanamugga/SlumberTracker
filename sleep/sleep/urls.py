@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from tracker import views as tracker_views
+from tracker.api_views import api_sleep_list
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -28,4 +29,8 @@ urlpatterns = [
     path("", tracker_views.dashboard, name="dashboard"),
     path("add/", tracker_views.add_sleep, name="add_sleep"),
     path("delete/<int:pk>/", tracker_views.delete_sleep, name="delete_sleep"),
+    path("api/sleep/", api_sleep_list, name="api_sleep_list"),
 ]
+
+
+
