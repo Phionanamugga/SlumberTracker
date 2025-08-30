@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Welcome {{ user.username }}</h1>
+    <p>Average sleep: {{ avg_sleep }} hours</p>
+    <a href="{% url 'add_sleep' %}">Log Sleep</a>
+    <ul>
+      {% for s in sessions %}
+        <li>{{ s.start_time }} → {{ s.end_time }} ({{ s.duration_hours }}h)
+          <a href="{% url 'delete_sleep' s.pk %}">Delete</a>
+        </li>
+      {% empty %}
+        <li>No sleep sessions logged yet.</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'logout' %}">Logout</a>
+  </body>
+</html>
