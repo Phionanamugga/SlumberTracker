@@ -83,8 +83,6 @@ This project showcases:
 
 👩🏽‍💻 Author
 Phiona Namugga
-🎓 MSc Data Science, AI & Digital Business
-📈 Data Science Apprentice @ ALX Africa
 ☁️ AWS Certified Cloud Practitioner
 
 
